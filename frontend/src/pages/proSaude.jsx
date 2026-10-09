@@ -1,7 +1,10 @@
 
-import "./css/ProSaude.css";
+import proSaudeStylesheet from "./css/ProSaude.css?url";
+import usePageStyles from "../hooks/usePageStyles";
 
 export default function ProSaude() {
+  usePageStyles(proSaudeStylesheet);
+
   return (
     <main className="container-profissionais">
         <header className="cabecalho-profissionais">

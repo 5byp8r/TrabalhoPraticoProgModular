@@ -1,289 +1,312 @@
-/* Reutilização do pacientes.css */
-
 * {
-  margin: 1vh;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #79b7ff;
-  color: #202938;
+    font-family: Arial, sans-serif;
+    background-color: #79b7ff;
+    color: #202938;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px;
 }
 
 .cabecalho {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 32px;
 }
 
 .cabecalho h1 {
-  font-size: 30px;
-  margin-bottom: 8px;
+    font-size: 30px;
+    margin-bottom: 8px;
 }
 
 .cabecalho p {
-  color: #687386;
-  font-size: 15px;
+    color: #687386;
+    font-size: 15px;
 }
 
+.btn-principal,
 button {
-  border: none;
-  border-radius: 8px;
-  padding: 11px 16px;
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.btn-novo {
-  background-color: #2563eb;
-  color: white;
+.btn-principal {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
 }
 
-.pesquisa {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 24px;
+.busca {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
 }
 
-.pesquisa input {
-  width: 100%;
-  max-width: 600px;
-  padding: 14px 16px;
-  border: 1px solid #d9dfeb;
-  border-radius: 9px;
-  background-color: white;
-  font-size: 15px;
+.busca input,
+.busca select {
+    padding: 14px 16px;
+    border: 1px solid #d9dfeb;
+    border-radius: 9px;
+    background-color: white;
+    font-size: 15px;
 }
 
-.pesquisa span {
-  color: #687386;
-  font-size: 14px;
-  white-space: nowrap;
+.busca input {
+    width: 100%;
+    max-width: 600px;
+}
+
+.busca select {
+    min-width: 180px;
+}
+
+.contador {
+    color: #687386;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    padding: 22px;
+    background-color: white;
+    border: 1px solid #e2e7f0;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(23, 37, 84, 0.04);
+}
+
+.card-topo {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
 }
 
 .avatar {
-  width: 48px;
-  height: 48px;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background-color: #dbeafe;
-  color: #1d4ed8;
-  font-size: 20px;
-  font-weight: bold;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.dados {
-  flex: 1;
-  min-width: 0;
+.info {
+    flex: 1;
+    min-width: 0;
 }
 
-.dados h2 {
-  font-size: 17px;
-  margin: 3px 0 15px;
+.info h3 {
+    font-size: 17px;
+    margin: 3px 0 15px;
 }
 
-.dados p {
-  font-size: 13px;
-  color: #687386;
-  margin-bottom: 9px;
-  overflow-wrap: anywhere;
+.info p {
+    margin-bottom: 9px;
+    color: #687386;
+    font-size: 13px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
 }
 
-.dados strong {
-  color: #374151;
+.info b {
+    color: #374151;
 }
 
-.acoes {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.status {
+    font-weight: bold;
+}
+
+.status.verde {
+    color: #15803d;
+}
+
+.status.azul {
+    color: #1d4ed8;
+}
+
+.status.laranja {
+    color: #b45309;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.btn-editar,
+.btn-remover {
+    display: inline-block;
+    border-radius: 8px;
+    padding: 11px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
 }
 
 .btn-editar {
-  background-color: #eff6ff;
-  color: #1d4ed8;
+    background-color: #eff6ff;
+    color: #1d4ed8;
 }
 
 .btn-remover {
-  background-color: #fef2f2;
-  color: #dc2626;
+    background-color: #fef2f2;
+    color: #dc2626;
 }
 
-.pesquisa select {
-  padding: 14px 16px;
-  border: 1px solid #d9dfeb;
-  border-radius: 9px;
-  background-color: white;
-  font-size: 15px;
+.pacientes {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid #e2e7f0;
+    font-size: 14px;
 }
 
-.lista-quartos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
+.pacientes ul {
+    list-style: none;
 }
 
-.card-quarto {
-  padding: 22px;
-  background-color: white;
-  border: 1px solid #e2e7f0;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(23, 37, 84, 0.04);
+.pacientes li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 0;
+    color: #374151;
 }
 
-.quarto-topo {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
+.pacientes li a {
+    color: #dc2626;
+    font-size: 12px;
+    text-decoration: none;
 }
 
-.quarto-topo .avatar {
-  font-size: 16px;
+.pacientes form {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
 }
 
-.status-disponivel,
-.status-ocupado,
-.status-indisponivel {
-  font-weight: bold;
+.pacientes select {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid #d9dfeb;
+    border-radius: 8px;
+    background-color: white;
+    color: #202938;
+    font-size: 13px;
 }
 
-.status-disponivel {
-  color: #15803d;
-}
-.status-ocupado {
-  color: #1d4ed8;
-}
-.status-indisponivel {
-  color: #b45309;
+.vazio {
+    color: #687386;
+    font-size: 13px;
 }
 
-.pacientes-quarto {
-  margin-top: 16px;
-  padding-top: 14px;
-  border-top: 1px solid #e2e7f0;
-  font-size: 14px;
+.form {
+    max-width: 480px;
+    margin-top: 32px;
 }
 
-.pacientes-quarto ul {
-  list-style: none;
+.form h2 {
+    margin-bottom: 16px;
+    font-size: 18px;
 }
 
-.pacientes-quarto li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6px 0;
-}
-
-.btn-retirar {
-  padding: 0;
-  background: none;
-  color: #dc2626;
-  font-size: 12px;
-}
-
-.sem-paciente {
-  color: #687386;
-  font-size: 13px;
-}
-
-.pacientes-quarto form {
-  display: flex;
-  gap: 8px;
-  margin-top: 10px;
-}
-
-.pacientes-quarto select {
-  flex: 1;
-  min-width: 0;
-  padding: 10px 12px;
-  border: 1px solid #d9dfeb;
-  border-radius: 8px;
-  background-color: white;
-  font-size: 13px;
-}
-
-.form-quarto {
-  max-width: 480px;
-  margin-top: 32px;
-}
-
-.form-quarto h2 {
-  font-size: 18px;
-  margin-bottom: 16px;
-}
-
-.form-quarto form {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.form-quarto label {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  font-size: 13px;
-  font-weight: bold;
-  color: #374151;
-}
-
-.form-quarto input,
-.form-quarto select {
-  padding: 11px 12px;
-  border: 1px solid #d9dfeb;
-  border-radius: 9px;
-  background-color: white;
-  font-size: 14px;
-  font-weight: normal;
-}
-
-/* ===== Celular ===== */
-
-@media (max-width: 600px) {
-  .container {
-    padding: 24px 16px;
-  }
-
-  .cabecalho {
-    align-items: flex-start;
+.form form {
+    display: flex;
     flex-direction: column;
-  }
+    gap: 14px;
+}
 
-  .pesquisa {
-    align-items: stretch;
+.form label {
+    display: flex;
     flex-direction: column;
-  }
+    gap: 4px;
+    color: #374151;
+    font-size: 13px;
+    font-weight: bold;
+}
 
-  .pesquisa input {
-    max-width: none;
-  }
+.form input,
+.form select {
+    padding: 11px 12px;
+    border: 1px solid #d9dfeb;
+    border-radius: 9px;
+    background-color: white;
+    color: #202938;
+    font-size: 14px;
+    font-weight: normal;
+}
 
-  .lista-quartos {
-    grid-template-columns: 1fr;
-  }
+@media (max-width: 700px) {
+    .container {
+        padding: 24px 16px;
+    }
 
-  .quarto-topo {
-    flex-wrap: wrap;
-  }
+    .cabecalho {
+        align-items: flex-start;
+        flex-direction: column;
+    }
 
-  .acoes {
-    flex-direction: row;
-    width: 100%;
-  }
+    .busca {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .busca input {
+        max-width: none;
+    }
+
+    .busca select {
+        width: 100%;
+    }
+
+    .lista {
+        grid-template-columns: 1fr;
+    }
+
+    .card-topo {
+        flex-wrap: wrap;
+    }
+
+    .botoes {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .botoes a {
+        flex: 1;
+    }
+
+    .pacientes form {
+        align-items: stretch;
+        flex-direction: column;
+    }
 }

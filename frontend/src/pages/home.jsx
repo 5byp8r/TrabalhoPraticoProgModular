@@ -1,5 +1,6 @@
-import "./css/home.css";
+import homeStylesheet from "./css/home.css?url";
 import imageHome from "../assets/hospital.jpg";
+import usePageStyles from "../hooks/usePageStyles";
 
 const atalhos = [
   { titulo: "Pacientes", texto: "Cadastre e gerencie os pacientes." },
@@ -9,6 +10,8 @@ const atalhos = [
 ];
 
 export default function Home() {
+  usePageStyles(homeStylesheet);
+
   return (
     <main className="container">
       <section className="home-hero">

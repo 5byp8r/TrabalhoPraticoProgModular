@@ -1,6 +1,9 @@
-import "./css/consultas.css";
+import consultasStylesheet from "./css/consultas.css?url";
+import usePageStyles from "../hooks/usePageStyles";
 
 function Consultas() {
+  usePageStyles(consultasStylesheet);
+
   return (
     <main className="container">
       <header className="cabecalho">

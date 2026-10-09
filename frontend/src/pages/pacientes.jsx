@@ -1,6 +1,9 @@
-import "./css/pacientes.css";
+import pacientesStylesheet from "./css/pacientes.css?url";
+import usePageStyles from "../hooks/usePageStyles";
 
 export default function Pacientes() {
+  usePageStyles(pacientesStylesheet);
+
   return (
     <main className="container">
         <header className="cabecalho">

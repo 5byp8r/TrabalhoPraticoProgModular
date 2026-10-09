@@ -1,4 +1,5 @@
-import "./css/quartos.css";
+import quartosStylesheet from "./css/quartos.css?url";
+import usePageStyles from "../hooks/usePageStyles";
 
 // exemplo dos pacientes aí
 const quartos = [
@@ -17,6 +18,8 @@ const corDoStatus = {
 };
 
 export default function Quartos() {
+  usePageStyles(quartosStylesheet);
+
   return (
     <>
       

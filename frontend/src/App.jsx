@@ -15,7 +15,7 @@ import Home from "./pages/home";
 import Pacientes from "./pages/pacientes";
 import ProSaude from "./pages/proSaude";
 import Internacoes from "./pages/internacoes";
-import Agendamento from "./pages/agendamento";
+import Consultas from "./pages/consultas";
 import Quartos from "./pages/quartos";
 import Login from "./pages/login";
 
@@ -29,7 +29,7 @@ function App() {
         <Link to="/pacientes">Pacientes</Link>
         <Link to="/proSaude">ProSaude</Link>
         <Link to="/internacoes">Internações</Link>
-        <Link to="/agendamento">Agendamento</Link>
+        <Link to="/consultas">Consultas</Link>
         <Link to="/quartos">Quartos</Link>
         <Link to="/login">Login</Link>
       </nav>
@@ -39,7 +39,7 @@ function App() {
         <Route path="/pacientes" element={<Pacientes />} />
         <Route path="/proSaude" element={<ProSaude />} />
         <Route path="/internacoes" element={<Internacoes />} />
-        <Route path="/agendamento" element={<Agendamento />} />
+        <Route path="/consultas" element={<Consultas />} />
         <Route path="/quartos" element={<Quartos />} />
         <Route path="/login" element={<Login />} />
       </Routes>

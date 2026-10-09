@@ -60,12 +60,8 @@ Nesta etapa do projeto, cada grupo deverá elaborar cartões CRC para representa
 
 | Nome da Classe | Usuario |
 | --- | --- |
+| Responsabilidades | Colaborações |
+| 1. Conhecer seus dados (e-mail, senha, nome de usuario) 2. Autenticar-se no sistema |  |
 
 
-## Responsabilidades
 
-- 1. Conhecer seus dados (e-mail, senha, nome de usuario)
-
-- 2. Autenticar-se no sistema
-
-## Colaborações

@@ -1,3 +1,5 @@
+import "./css/consultas.css";
+
 function Consultas() {
   return (
     <main className="container">
@@ -8,7 +10,7 @@ function Consultas() {
         </div>
 
         <button className="btn-novo">
-          + Novo consulta
+          + Nova consulta
         </button>
       </header>
 

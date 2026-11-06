@@ -1,2 +1,2 @@
-/** Coordenação de regras de negócio e acesso aos repositórios. */
+/** Coordenação das regras de negócio com armazenamento temporário em memória. */
 package br.com.hospital.service;

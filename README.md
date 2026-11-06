@@ -14,4 +14,4 @@ Para atender essa necessidade, será desenvolvido um Sistema de Informação Hos
 
 - Gabriel do Carmo Assis
 
-- Lukas Nathan Matos Candeia...
+- Lukas Nathan Matos Candeia

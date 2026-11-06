@@ -2,7 +2,7 @@ package br.com.hospital.model;
 
 public class MedicoEspecialista extends ProfissionalSaude {
 
-    private String especialidade;
+    private final Especialidade especialidade;
 
     public MedicoEspecialista(
             Long id,
@@ -10,19 +10,26 @@ public class MedicoEspecialista extends ProfissionalSaude {
             String registroProfissional,
             String telefone,
             String email,
-            String especialidade) {
+            Especialidade especialidade) {
 
         super(id, nome, registroProfissional, telefone, email);
 
-        if (especialidade == null || especialidade.isBlank()) {
+        if (especialidade == null) {
             throw new IllegalArgumentException(
                     "A especialidade deve ser informada.");
         }
 
-        this.especialidade = especialidade.trim();
+        this.especialidade = especialidade;
     }
 
-    public String getEspecialidade() {
+    public Especialidade getEspecialidade() {
         return especialidade;
+    }
+
+    public void realizaAtend(ConsultaEspecializada consulta) {
+        if (consulta == null || consulta.getMedico() != this) {
+            throw new IllegalArgumentException("A consulta deve pertencer a este especialista.");
+        }
+        consulta.iniciar();
     }
 }

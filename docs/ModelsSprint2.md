@@ -1,4 +1,4 @@
-# Models da Sprint 2
+# Models da Sprint 2 - Documentação e testes feitos totalmentes por IA (Codex).
 
 Implementação restrita a `br.com.hospital.model` e seus testes unitários.
 Services, repositories, controllers e configuração da API permanecem sob responsabilidade
